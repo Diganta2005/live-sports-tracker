@@ -45,10 +45,147 @@ server, set VITE_API_URL to its origin in the frontend environment.
 - GET /api/football/stream/live (SSE)
 - GET /api/fantasy/leaderboard
 - POST /api/fantasy/teams
+- # ⚽ Live Sports Score & Stats Tracker
+
+A modern full-stack football/sports tracking platform that provides live match scores, match events, player statistics, team information, fantasy points, performance analytics, and educational simulated match odds.
+
+## 🚀 Features
+
+### 🔴 Live Scores
+- Real-time football match scores
+- Live match status and minute
+- Upcoming fixtures
+- Match results
+- Automatic live updates using Server-Sent Events (SSE)
+
+### 📢 Live Match Events
+- Goals
+- Yellow cards
+- Red cards
+- Substitutions
+- Penalties
+- VAR events
+- Half-time and full-time events
+
+### 📊 Statistics & Analytics
+- Team statistics
+- Player statistics
+- Match statistics
+- Possession
+- Shots
+- Passing
+- Player ratings
+- Performance charts
+
+### ⭐ Fantasy Football
+- Create a fantasy team
+- Player selection
+- Fantasy budget
+- Position restrictions
+- Captain and vice-captain
+- Automatic fantasy-point calculation
+- Fantasy leaderboard
+
+### 📈 Educational Odds Simulation
+- Home-win probability
+- Draw probability
+- Away-win probability
+- Simulated odds
+- Odds movement charts
+
+> **Educational Simulation Only — No Real-Money Betting**
+
+### 👤 User Features
+- User registration
+- Login/logout
+- JWT authentication
+- User profile
+- Favorite teams and players
+- Notification preferences
+
+---
+
+# 🛠️ Technology Stack
+
+## Frontend
+
+- React
+- Vite
+- Tailwind CSS
+- React Router
+- Axios
+- Recharts
+
+## Backend
+
+- Node.js
+- Express.js
+- Axios
+- Server-Sent Events (SSE)
+- JWT
+- bcrypt
+
+## Database
+
+- MongoDB
+- Mongoose
+
+## Sports Data
+
+- API-Football
+
+## Development Tools
+
+- VS Code
+- Git
+- GitHub
+- Postman
+
+---
+
+# 🏗️ Architecture
+
+```text
+                  API-Football
+                       │
+                       ▼
+                ┌─────────────┐
+                │ Node/Express│
+                │   Backend   │
+                └──────┬──────┘
+                       │
+            ┌──────────┼──────────┐
+            ▼          ▼          ▼
+         MongoDB     Cache       SSE
+            │                     │
+            └──────────┬──────────┘
+                       ▼
+                 React Frontend
+                       │
+        ┌──────────────┼──────────────┐
+        ▼              ▼              ▼
+   Live Scores     Statistics      Fantasy
+        │              │              │
+        ▼              ▼              ▼
+   Commentary       Charts       Leaderboard
 
 ## Data and safety notes
 
 API-Football remains the source of truth for football information. The backend keeps the API key
 server-side and passes only the required data to the browser. The simulated-odds page is a
 transparent learning feature, not a betting product or an endorsement of gambling.
-
+🔮 Future Improvements
+Possible future features:
+- Multi-sport support
+- Cricket
+- Basketball
+- Tennis
+- Advanced player comparison
+- Advanced team analytics
+- Push notifications
+- Redis caching
+- WebSocket support
+- AI-powered match analysis
+- AI-generated match summaries
+- Historical performance analysis
+- More advanced fantasy leagues
